@@ -80,6 +80,11 @@
     position: relative;
   }
 
+  .btn-glow-slow {
+    @apply relative bg-xenith-accent hover:bg-xenith-accent-hover text-white px-6 py-3 rounded-md overflow-hidden animate-glow-slow transition-all duration-300;
+    position: relative;
+  }
+
   .gradient-text {
     @apply bg-gradient-to-br from-xenith-accent to-blue-400 bg-clip-text text-transparent;
   }
@@ -99,6 +104,19 @@
   50% { transform: translateY(-10px); }
 }
 
+@keyframes glow-slow {
+  0%, 100% { 
+    boxShadow: '0 0 5px rgba(108, 86, 249, 0.4), 0 0 10px rgba(108, 86, 249, 0.2)' 
+  }
+  50% { 
+    boxShadow: '0 0 15px rgba(108, 86, 249, 0.6), 0 0 20px rgba(108, 86, 249, 0.4)' 
+  }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.animate-glow-slow {
+  animation: glow-slow 5s ease-in-out infinite;
 }

@@ -3,6 +3,7 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import AuthModal from "@/components/AuthModal";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const About = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -60,9 +61,22 @@ const About = () => {
                 for beneficial AI. Join our waitlist to get early access to our technology and
                 help shape the future of artificial intelligence.
               </p>
-              <Button onClick={openAuthModal} className="btn-glow">
+              <Button onClick={openAuthModal} className="btn-glow-slow">
                 Join Waitlist
               </Button>
+            </div>
+
+            <div className="mt-12 p-6 bg-xenith-darker rounded-lg border border-xenith-border">
+              <h3 className="text-xl font-semibold mb-4">Our Research Papers</h3>
+              <p className="mb-4">
+                Access our groundbreaking research papers and stay updated with our latest discoveries
+                in the field of artificial intelligence and large language models.
+              </p>
+              <Link to="/research-papers">
+                <Button className="btn-glow-slow">
+                  Access Research Papers
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

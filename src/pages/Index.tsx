@@ -21,7 +21,7 @@ const Index = () => {
       <section className="pt-32 pb-24 container-fluid flex-1 flex flex-col items-center justify-center text-center relative">
         <div className="max-w-4xl mx-auto z-10">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
-            The Future of AI with <span className="gradient-text">XENITH</span>
+            The Future of AI with <span className="gradient-text">XenArcAI</span>
           </h1>
           <p className="text-lg md:text-xl text-xenith-text-muted mb-12 max-w-2xl mx-auto">
             Unlock unprecedented intelligence and capabilities with our cutting-edge 
@@ -34,7 +34,7 @@ const Index = () => {
                 Dashboard Access
               </Button>
             ) : (
-              <Button onClick={openAuthModal} className="btn-glow">
+              <Button onClick={openAuthModal} className="btn-glow-slow">
                 Join Waitlist
               </Button>
             )}
@@ -91,7 +91,7 @@ const Index = () => {
           </div>
 
           <div className="flex justify-center">
-            <Button onClick={openAuthModal} className="btn-glow">
+            <Button onClick={openAuthModal} className="btn-glow-slow">
               Join Waitlist for Early Access
             </Button>
           </div>
