@@ -16,24 +16,25 @@ const Navbar = ({ openAuthModal }: NavbarProps) => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-xenith-darker bg-opacity-80 backdrop-blur-md border-b border-xenith-border">
+    <header className="fixed w-full top-0 z-50 bg-white bg-opacity-90 backdrop-blur-md border-b border-slate-200 shadow-sm">
       <div className="container-fluid py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
-          <div className="h-8 w-8 rounded-full bg-xenith-accent flex items-center justify-center">
-            <span className="text-white font-bold">X</span>
-          </div>
-          <span className="text-xl font-bold text-white">XenArcAI</span>
+          <img 
+            src="/lovable-uploads/0744e48b-85d0-4203-b5b3-72a53c2e01f2.png" 
+            alt="XenArcAI Logo" 
+            className="h-8" 
+          />
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-xenith-text hover:text-xenith-accent transition-colors">
+          <Link to="/" className="text-slate-800 hover:text-xenith-accent transition-colors">
             Home
           </Link>
-          <Link to="/about" className="text-xenith-text hover:text-xenith-accent transition-colors">
+          <Link to="/about" className="text-slate-800 hover:text-xenith-accent transition-colors">
             About
           </Link>
-          <Link to="/contact" className="text-xenith-text hover:text-xenith-accent transition-colors">
+          <Link to="/contact" className="text-slate-800 hover:text-xenith-accent transition-colors">
             Contact
           </Link>
           <Button onClick={openAuthModal} variant="outline" className="border-xenith-accent text-xenith-accent hover:bg-xenith-accent hover:text-white">
@@ -42,32 +43,32 @@ const Navbar = ({ openAuthModal }: NavbarProps) => {
         </nav>
 
         {/* Mobile menu button */}
-        <button onClick={toggleMenu} className="md:hidden text-white">
+        <button onClick={toggleMenu} className="md:hidden text-slate-800">
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-xenith-darker border-t border-xenith-border">
+        <div className="md:hidden bg-white border-t border-slate-200">
           <div className="container-fluid py-4 flex flex-col space-y-4">
             <Link 
               to="/" 
-              className="text-xenith-text py-2 hover:text-xenith-accent transition-colors"
+              className="text-slate-800 py-2 hover:text-xenith-accent transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
               to="/about" 
-              className="text-xenith-text py-2 hover:text-xenith-accent transition-colors"
+              className="text-slate-800 py-2 hover:text-xenith-accent transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
               to="/contact" 
-              className="text-xenith-text py-2 hover:text-xenith-accent transition-colors"
+              className="text-slate-800 py-2 hover:text-xenith-accent transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact

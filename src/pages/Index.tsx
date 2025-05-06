@@ -14,16 +14,21 @@ const Index = () => {
   const closeAuthModal = () => setIsAuthModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-xenith-dark flex flex-col">
+    <div className="min-h-screen bg-slate-100 flex flex-col">
       <Navbar openAuthModal={openAuthModal} />
 
       {/* Hero Section */}
       <section className="pt-32 pb-24 container-fluid flex-1 flex flex-col items-center justify-center text-center relative">
         <div className="max-w-4xl mx-auto z-10">
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8">
+          <img 
+            src="/lovable-uploads/0744e48b-85d0-4203-b5b3-72a53c2e01f2.png" 
+            alt="XenArcAI Logo" 
+            className="h-16 mx-auto mb-8"
+          />
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-slate-900">
             The Future of AI with <span className="gradient-text">XenArcAI</span>
           </h1>
-          <p className="text-lg md:text-xl text-xenith-text-muted mb-12 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-slate-600 mb-12 max-w-2xl mx-auto">
             Unlock unprecedented intelligence and capabilities with our cutting-edge 
             large language models. Designed for researchers, developers, and enterprises.
           </p>
@@ -51,40 +56,40 @@ const Index = () => {
         </div>
 
         {/* Background gradient elements */}
-        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-30">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 opacity-20">
           <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-xenith-accent rounded-full filter blur-[100px]"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-600 rounded-full filter blur-[100px]"></div>
         </div>
       </section>
 
       {/* Model Section */}
-      <section id="model-section" className="py-24 bg-xenith-darker relative">
+      <section id="model-section" className="py-24 bg-white relative">
         <div className="container-fluid relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold mb-4 text-slate-900">
               Introducing <span className="gradient-text">XENITH-1</span>
             </h2>
-            <p className="text-xenith-text-muted max-w-2xl mx-auto">
+            <p className="text-slate-600 max-w-2xl mx-auto">
               Our flagship large language model setting new standards in AI capabilities.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-xenith-dark p-6 rounded-lg border border-xenith-border card-hover">
-              <h3 className="text-xl font-semibold mb-3">Advanced Reasoning</h3>
-              <p className="text-xenith-text-muted">
+            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm card-hover">
+              <h3 className="text-xl font-semibold mb-3 text-slate-800">Advanced Reasoning</h3>
+              <p className="text-slate-600">
                 Demonstrates exceptional logical reasoning and problem-solving across complex domains.
               </p>
             </div>
-            <div className="bg-xenith-dark p-6 rounded-lg border border-xenith-border card-hover">
-              <h3 className="text-xl font-semibold mb-3">Multimodal Understanding</h3>
-              <p className="text-xenith-text-muted">
+            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm card-hover">
+              <h3 className="text-xl font-semibold mb-3 text-slate-800">Multimodal Understanding</h3>
+              <p className="text-slate-600">
                 Comprehensive understanding and generation of text, code, and structured data.
               </p>
             </div>
-            <div className="bg-xenith-dark p-6 rounded-lg border border-xenith-border card-hover">
-              <h3 className="text-xl font-semibold mb-3">Safe & Aligned</h3>
-              <p className="text-xenith-text-muted">
+            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm card-hover">
+              <h3 className="text-xl font-semibold mb-3 text-slate-800">Safe & Aligned</h3>
+              <p className="text-slate-600">
                 Built with our proprietary techniques to ensure safety, reliability and alignment.
               </p>
             </div>
@@ -98,7 +103,7 @@ const Index = () => {
         </div>
 
         {/* Background effect */}
-        <div className="absolute inset-0 bg-gradient-to-b from-xenith-dark to-transparent z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-100 to-transparent z-0"></div>
       </section>
 
       <AuthModal isOpen={isAuthModalOpen} onClose={closeAuthModal} />

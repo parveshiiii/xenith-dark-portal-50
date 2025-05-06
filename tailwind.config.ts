@@ -64,13 +64,13 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				xenith: {
-					dark: '#121212',
-					darker: '#0A0A0A',
+					dark: '#1E293B',
+					darker: '#0F172A',
 					accent: '#6C56F9',
 					'accent-hover': '#8673FA',
-					text: '#F5F5F7',
-					'text-muted': '#A1A1A6',
-					border: '#2D2D2D'
+					text: '#F8FAFC',
+					'text-muted': '#94A3B8',
+					border: '#334155'
 				}
 			},
 			borderRadius: {

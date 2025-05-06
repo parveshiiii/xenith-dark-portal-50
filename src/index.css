@@ -5,23 +5,23 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    --background: 210 30% 96%;
+    --foreground: 222 47% 11%;
     
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
     
-    --popover: 240 10% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
     
     --primary: 252 89% 66%;
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 210 38% 95%;
+    --secondary-foreground: 222 47% 11%;
     
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 210 40% 93%;
+    --muted-foreground: 215 16% 46%;
     
     --accent: 252 89% 66%;
     --accent-foreground: 0 0% 100%;
@@ -29,9 +29,9 @@
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
-    --ring: 240 4.9% 83.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 222 47% 11%;
     --radius: 0.5rem;
   }
 }
@@ -40,11 +40,11 @@
   html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: #2D2D2D #121212;
+    scrollbar-color: #CBD5E1 #F1F5F9;
   }
 
   body {
-    @apply bg-xenith-dark text-xenith-text;
+    @apply bg-slate-100 text-slate-900;
     font-family: 'Inter', sans-serif;
   }
 
@@ -53,16 +53,16 @@
   }
   
   ::-webkit-scrollbar-track {
-    background: #121212;
+    background: #F1F5F9;
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #2D2D2D;
+    background: #CBD5E1;
     border-radius: 4px;
   }
   
   ::-webkit-scrollbar-thumb:hover {
-    background: #3D3D3D;
+    background: #94A3B8;
   }
 }
 
@@ -72,7 +72,7 @@
   }
   
   .btn-secondary {
-    @apply bg-transparent hover:bg-white/10 border border-xenith-border px-6 py-3 rounded-md transition-all duration-300;
+    @apply bg-transparent hover:bg-black/5 border border-slate-300 px-6 py-3 rounded-md transition-all duration-300;
   }
 
   .btn-glow {
