@@ -15,22 +15,25 @@ const Navbar = ({ openAuthModal }: NavbarProps) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  // Get the base URL for GitHub Pages or use / for local development
+  const baseUrl = process.env.NODE_ENV === "production" ? "." : "";
+
   return (
     <header className="fixed w-full top-0 z-50 bg-white/60 bg-opacity-90 backdrop-blur-md border-b border-slate-200 shadow-sm">
       <div className="container-fluid py-4 flex items-center justify-between">
-        <Link to="/" className="text-xl font-bold text-xenith-accent">
+        <Link to={`${baseUrl}/`} className="text-xl font-bold text-xenith-accent">
           XenArcAI
         </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link to="/" className="text-slate-800 hover:text-xenith-accent transition-colors">
+          <Link to={`${baseUrl}/`} className="text-slate-800 hover:text-xenith-accent transition-colors">
             Home
           </Link>
-          <Link to="/about" className="text-slate-800 hover:text-xenith-accent transition-colors">
+          <Link to={`${baseUrl}/about`} className="text-slate-800 hover:text-xenith-accent transition-colors">
             About
           </Link>
-          <Link to="/contact" className="text-slate-800 hover:text-xenith-accent transition-colors">
+          <Link to={`${baseUrl}/contact`} className="text-slate-800 hover:text-xenith-accent transition-colors">
             Contact
           </Link>
           <Button onClick={openAuthModal} variant="outline" className="border-xenith-accent text-xenith-accent hover:bg-xenith-accent hover:text-white">
@@ -49,21 +52,21 @@ const Navbar = ({ openAuthModal }: NavbarProps) => {
         <div className="md:hidden bg-white border-t border-slate-200">
           <div className="container-fluid py-4 flex flex-col space-y-4">
             <Link 
-              to="/" 
+              to={`${baseUrl}/`}
               className="text-slate-800 py-2 hover:text-xenith-accent transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link 
-              to="/about" 
+              to={`${baseUrl}/about`} 
               className="text-slate-800 py-2 hover:text-xenith-accent transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About
             </Link>
             <Link 
-              to="/contact" 
+              to={`${baseUrl}/contact`} 
               className="text-slate-800 py-2 hover:text-xenith-accent transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
