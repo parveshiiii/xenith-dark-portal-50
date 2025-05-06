@@ -33,6 +33,16 @@
     --input: 214 32% 91%;
     --ring: 222 47% 11%;
     --radius: 0.5rem;
+
+    /* Dark theme elements */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 252 89% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 252 89% 76%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 215 28% 17%;
+    --sidebar-ring: 215 28% 17%;
   }
 }
 
@@ -95,6 +105,23 @@
   
   .container-fluid {
     @apply px-4 md:px-8 lg:px-16 mx-auto max-w-7xl;
+  }
+  
+  /* Mixed theme components */
+  .dark-section {
+    @apply bg-slate-800 text-white;
+  }
+  
+  .light-section {
+    @apply bg-white text-slate-900;
+  }
+  
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-sm border border-slate-200 rounded-xl shadow-sm;
+  }
+  
+  .dark-card {
+    @apply bg-slate-800/90 backdrop-blur-sm border border-slate-700 rounded-xl text-white shadow-md;
   }
 }
 

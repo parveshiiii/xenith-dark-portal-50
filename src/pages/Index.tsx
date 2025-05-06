@@ -5,6 +5,7 @@ import AuthModal from "@/components/AuthModal";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/hooks/useAuth";
 import { ArrowDown } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
@@ -20,11 +21,6 @@ const Index = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-24 container-fluid flex-1 flex flex-col items-center justify-center text-center relative">
         <div className="max-w-4xl mx-auto z-10">
-          <img 
-            src="/lovable-uploads/0744e48b-85d0-4203-b5b3-72a53c2e01f2.png" 
-            alt="XenArcAI Logo" 
-            className="h-16 mx-auto mb-8"
-          />
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-8 text-slate-900">
             The Future of AI with <span className="gradient-text">XenArcAI</span>
           </h1>
@@ -43,9 +39,11 @@ const Index = () => {
                 Join Waitlist
               </Button>
             )}
-            <Button variant="outline" className="btn-secondary">
-              Learn More
-            </Button>
+            <Link to="/about">
+              <Button variant="outline" className="btn-secondary">
+                Learn More
+              </Button>
+            </Link>
           </div>
 
           <div className="absolute bottom-8 left-0 right-0 flex justify-center animate-bounce">

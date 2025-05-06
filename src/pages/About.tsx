@@ -18,11 +18,6 @@ const About = () => {
       <div className="pt-32 pb-24 container-fluid">
         <div className="max-w-4xl mx-auto">
           <div className="mb-8 text-center">
-            <img 
-              src="/lovable-uploads/0744e48b-85d0-4203-b5b3-72a53c2e01f2.png" 
-              alt="XenArcAI Logo" 
-              className="h-12 mx-auto mb-6"
-            />
             <h1 className="text-4xl md:text-5xl font-bold gradient-text">About XenArcAI</h1>
           </div>
           
@@ -61,7 +56,7 @@ const About = () => {
               assist humans across a wide range of applications while minimizing potential risks.
             </p>
             
-            <div className="mt-12 p-6 bg-white rounded-lg border border-slate-200 shadow-sm">
+            <div className="mt-12 p-6 glass-card">
               <h3 className="text-xl font-semibold mb-4 text-slate-800">Join Our Journey</h3>
               <p className="mb-4 text-slate-700">
                 We're looking for partners, researchers, and early adopters who share our vision
@@ -73,9 +68,9 @@ const About = () => {
               </Button>
             </div>
 
-            <div className="mt-12 p-6 bg-white rounded-lg border border-slate-200 shadow-sm">
-              <h3 className="text-xl font-semibold mb-4 text-slate-800">Our Research Papers</h3>
-              <p className="mb-4 text-slate-700">
+            <div className="mt-12 p-6 dark-card">
+              <h3 className="text-xl font-semibold mb-4">Our Research Papers</h3>
+              <p className="mb-4 text-slate-300">
                 Access our groundbreaking research papers and stay updated with our latest discoveries
                 in the field of artificial intelligence and large language models.
               </p>

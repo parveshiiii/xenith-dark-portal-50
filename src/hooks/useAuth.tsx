@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
     setLoading(true);
     try {
       // This simulates the registration process
-      console.log("Signing up with:", { email, password, username });
+      console.log("Signing up with:", { email, username });
       
       // In a real implementation, this would be a Supabase call
       // const { data, error } = await supabase.auth.signUp({ email, password });
@@ -47,7 +47,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       const newUser = {
         id: Date.now().toString(),
         email,
-        username
+        username: username || email.split('@')[0]
       };
       
       localStorage.setItem("xenith-user", JSON.stringify(newUser));
@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const signIn = async (email: string, password: string) => {
     setLoading(true);
     try {
-      console.log("Signing in with:", { email, password });
+      console.log("Signing in with:", { email });
       
       // Simulate checking localStorage for user
       const storedUserStr = localStorage.getItem("xenith-user");
@@ -71,7 +71,7 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
       
       const storedUser = JSON.parse(storedUserStr);
       if (storedUser.email === email) {
-        // In a real app, we'd verify the password with Supabase
+        // In a real app with Supabase, we would verify auth here
         setUser(storedUser);
       } else {
         throw new Error("Invalid credentials");

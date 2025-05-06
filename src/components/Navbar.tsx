@@ -16,14 +16,10 @@ const Navbar = ({ openAuthModal }: NavbarProps) => {
   };
 
   return (
-    <header className="fixed w-full top-0 z-50 bg-white bg-opacity-90 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <header className="fixed w-full top-0 z-50 bg-white/60 bg-opacity-90 backdrop-blur-md border-b border-slate-200 shadow-sm">
       <div className="container-fluid py-4 flex items-center justify-between">
-        <Link to="/" className="flex items-center space-x-2">
-          <img 
-            src="/lovable-uploads/0744e48b-85d0-4203-b5b3-72a53c2e01f2.png" 
-            alt="XenArcAI Logo" 
-            className="h-8" 
-          />
+        <Link to="/" className="text-xl font-bold text-xenith-accent">
+          XenArcAI
         </Link>
 
         {/* Desktop Navigation */}
