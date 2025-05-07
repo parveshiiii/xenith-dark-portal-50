@@ -15,7 +15,7 @@ const Index = () => {
   const closeAuthModal = () => setIsAuthModalOpen(false);
 
   return (
-    <div className="min-h-screen bg-slate-100 flex flex-col">
+    <div className="min-h-screen flex flex-col">
       <Navbar openAuthModal={openAuthModal} />
 
       {/* Hero Section */}
@@ -73,19 +73,19 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm card-hover">
+            <div className="paper-card p-6 card-hover">
               <h3 className="text-xl font-semibold mb-3 text-slate-800">Advanced Reasoning</h3>
               <p className="text-slate-600">
                 Demonstrates exceptional logical reasoning and problem-solving across complex domains.
               </p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm card-hover">
+            <div className="glass-card p-6 card-hover">
               <h3 className="text-xl font-semibold mb-3 text-slate-800">Multimodal Understanding</h3>
               <p className="text-slate-600">
                 Comprehensive understanding and generation of text, code, and structured data.
               </p>
             </div>
-            <div className="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm card-hover">
+            <div className="texture-card p-6 card-hover">
               <h3 className="text-xl font-semibold mb-3 text-slate-800">Safe & Aligned</h3>
               <p className="text-slate-600">
                 Built with our proprietary techniques to ensure safety, reliability and alignment.
